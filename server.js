@@ -1,6 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
+import cros from "cors";
 
 import authRoutes from "./routes/auth.routes.js";
 import messageRoutes from "./routes/message.routes.js";
@@ -12,6 +13,14 @@ import { app, server } from "./socket/socket.js";
 dotenv.config();
 
 const PORT = process.env.PORT || 5000;
+
+app.use(
+  cors({
+    origin: "https://chat-app-zenclass-project.netlify.app",
+    method: ["GET", "POST", "DELETE", "PUT"],
+    credentials: true,
+  })
+);
 
 app.use(express.json());
 app.use(cookieParser());
