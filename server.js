@@ -16,9 +16,8 @@ const PORT = process.env.PORT || 5000;
 
 app.use(
   cors({
-    origin: "https://chat-app-zenclass-project.netlify.app",
-    method: ["GET", "POST", "DELETE", "PUT"],
-    credentials: true,
+    origin: "https://main--chat-app-project-zenclass.netlify.app",
+    method: ["GET", "POST", "DELETE", "PUT"]
   })
 );
 

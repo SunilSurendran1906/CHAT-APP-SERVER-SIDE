@@ -7,7 +7,7 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: ["https://chat-app-zenclass-project.netlify.app"],
+    origin: ["https://main--chat-app-project-zenclass.netlify.app"],
     methods: ["GET", "POST"],
   },
 });
